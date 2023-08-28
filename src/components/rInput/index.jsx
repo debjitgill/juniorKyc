@@ -1,6 +1,7 @@
 import React from "react";
+import "./styles.scss";
 
-const RInput = () => {
+const RInput = (props) => {
   const {
     externalClassName,
     onChange,
@@ -10,43 +11,42 @@ const RInput = () => {
     type = "text",
     name,
     onKeyDown,
-    bgColor,
+    bgColor
   } = props;
 
   const renderInput = () => {
     return (
-      <div className="defaultInputbox">
-        <input
-          name={name}
-          className={` defaultInput ${externalClassName}`}
-          type={type}
-          value={value}
-          onChange={onChange}
-          placeholder={placeHolder}
-          onKeyDown={onKeyDown}
-        />
-      </div>
+      React.createElement("div", { className: "defaultInputbox" },
+        React.createElement("input", {
+          name: name,
+          className: `defaultInput ${externalClassName}`,
+          type: type,
+          value: value,
+          onChange: onChange,
+          placeholder: placeHolder,
+          onKeyDown: onKeyDown
+        })
+      )
     );
   };
 
   const renderPhoneInput = () => {
     return (
-      <div className={`defaultPhoneWrapper `}>
-        <span className={`defaultCountryCode ${bgColor ?? "bg-tertiary"}`}>
-          +91
-        </span>
-        <input
-          name={name}
-          className={`defaultInput ${externalClassName}`}
-          type={type}
-          value={value}
-          onChange={onChange}
-          placeholder={placeHolder}
-          onKeyDown={onKeyDown}
-        />
-      </div>
+      React.createElement("div", { className: `defaultPhoneWrapper` },
+        React.createElement("span", { className: `defaultCountryCode ${bgColor ?? "bg-tertiary"}` }, "+91"),
+        React.createElement("input", {
+          name: name,
+          className: `defaultInput ${externalClassName}`,
+          type: type,
+          value: value,
+          onChange: onChange,
+          placeholder: placeHolder,
+          onKeyDown: onKeyDown
+        })
+      )
     );
   };
+
   return (
     <>
       {!isPhoneNumber && renderInput()}
