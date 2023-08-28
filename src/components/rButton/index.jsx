@@ -1,11 +1,30 @@
-import React from 'react'
+import React from "react"
+import "./styles.scss"
 
-const index = () => {
+
+
+const RButton = props => {
+  const {
+    buttonName,
+    handleButtonClick,
+    externalClassName,
+    bgColor,
+    color,
+    border,
+    text,
+  } = props
   return (
-    <div>
+    <button
+      className={`defaultButtonClass ${text ?? ""} ${border ?? "border-none"} ${
+        bgColor ?? "bg-secondary"
+      } ${color ?? "text-black"} rounded-full ${externalClassName}`}
       
-    </div>
+      onClick={handleButtonClick}
+    >
+      {buttonName}
+    </button>
   )
 }
 
-export default index
+export default RButton
+

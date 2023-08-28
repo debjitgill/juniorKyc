@@ -1,10 +1,16 @@
 import React from 'react'
+import RInput from '../../components/rInput'
+import RButton from '../../components/rButton'
 
 const Home = () => {
   return (
-    <div>
-      <p className='font-bold text-center'>Home Page Worksffff</p>
+    <>
+    <div className='border p-7'>
+      <p className='font-bold text-center'>Home Page Worksfffacacf</p>
+    
+    
     </div>
+    </>
   )
 }
 
