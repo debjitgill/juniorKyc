@@ -5,7 +5,7 @@ import { ROUTES_NAME } from "./routers/routeConstants";
 import Home from "./views/home";
 import MobileLogin from "./components/mobileLogin";
 import Login from "./components/login";
-import { BankDetails } from "./components/uploadSign";
+import { BankDetails } from "./components/bankDetails";
 function App() {
   return (
     <>
