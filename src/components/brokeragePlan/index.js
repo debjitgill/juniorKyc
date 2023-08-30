@@ -96,7 +96,7 @@ const BrokeragePlan = () => {
                   <p className="text-xl font-bold">@RS 0</p>
                 </div>
                 <div className="opacity-75">
-                  <div className="flex justify-between mx-4 my-2 font-bold">
+                  <div className="flex justify-between mx-4 my-2 pt-3 font-bold">
                     <p className="text-sm">Brokerage</p>
                     <p className="text-red text-xs">13 per trade</p>
                   </div>
@@ -120,7 +120,7 @@ const BrokeragePlan = () => {
                     <p className="text-sm">Currencies</p>
                     <p className="text-sm">13</p>
                   </div>
-                  <div className="flex justify-between mx-4 my-2 font-bold">
+                  <div className="flex justify-between mx-4 my-2  font-bold">
                     <p className="text-sm">F&O</p>
                     <p className="text-sm">13</p>
                   </div>
