@@ -6,6 +6,7 @@ import Home from "./views/home";
 import MobileLogin from "./components/mobileLogin";
 import Login from "./components/login";
 import { BankDetails } from "./components/bankDetails";
+import { Segments } from "./components/segment";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
           <Route path={ROUTES_NAME.MOBILE_LOGIN} element={<MobileLogin />} />
           <Route path={ROUTES_NAME.LOGIN} element={<Login />} />
           <Route path={ROUTES_NAME.BANK_DETAILS} element={<BankDetails />} />
+          <Route path={ROUTES_NAME.SEGMENT} element={<Segments />} />
         </Routes>
       </BrowserRouter>
     </>
