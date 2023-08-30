@@ -1,12 +1,16 @@
-@media screen and (max-width: 405px) {
-    .button-upload{
-        font-size: 13px;
-    }
-    
+@import "../../styles/colors.scss";
+
+@media screen and (max-width: 382px) {
+  .acc-no-input {
+    font-size: 13px;
+  }
+  .ifsc-input {
+    font-size: 13px;
+  }
 }
-@media screen and (max-width: 398px) {
-    .font-bold{
-        font-size: 13px;
-    }
-    
+.acc-no-input {
+  background-color: white;
+}
+.ifsc-input {
+  background-color: white;
 }

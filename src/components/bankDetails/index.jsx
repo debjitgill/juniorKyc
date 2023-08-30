@@ -14,11 +14,11 @@ export function BankDetails() {
     let isValid = true;
     const newErrors = {};
 
-    if (formData.bankAcNo.length < 5 || formData.bankAcNo.length > 14) {
+    if (formData.bankAcNo.length < 5 || formData.bankAcNo.length > 17) {
       newErrors.bankAcNo = "*Invalid Accout no.";
       isValid = false;
     }
-    if (formData.ifsc.length < 6) {
+    if (formData.ifsc.length < 5) {
       newErrors.ifsc = "*Invalid IFSC code.";
       isValid = false;
     }
@@ -42,18 +42,18 @@ export function BankDetails() {
   };
   return (
     <>
-      <div className="border bg-neutral mx-12 ">
-        <div className="font-bold flex justify-center p-3 text-3xl">
-          Enter your Bank Details
+      <div className="m-4 bg-neutral ">
+        <div className="font-bold text-center p-3 text-3xl">
+          <p>Enter your Bank Details</p>
         </div>
         <div className="flex flex-wrap justify-around">
-          <div className="flex flex-col w-1/3 mt-2">
+          <div className="flex flex-col mt-2">
             <label className="font-bold flex justify-center mt-4">
               Bank Account Number
             </label>
             <RInput
-              placeHolder="Enter your Bank Accout Number"
-              externalClassName="border my-4"
+              placeHolder="Enter Account Number"
+              externalClassName="acc-no-input border my-4"
               bgColor="bg-red"
               type="number"
               name="bankAcNo"
@@ -66,13 +66,13 @@ export function BankDetails() {
               </span>
             )}
           </div>
-          <div className="flex flex-col w-1/3 mt-4">
+          <div className="flex flex-col mt-4">
             <label className="font-bold flex justify-center mt-2">
               Enter Your Bank IFSC Code
             </label>
             <RInput
-              placeHolder="Enter your Bank IFSC Code"
-              externalClassName="border border-primary my-4"
+              placeHolder="Enter IFSC Code"
+              externalClassName="ifsc-input border my-4"
               type="text"
               name="ifsc"
               value={formData.ifsc}
