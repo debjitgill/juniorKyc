@@ -3,7 +3,6 @@ const ROUTES_NAME = {
     LOGIN:"login/",
     MOBILE_LOGIN:"mobilelogin/",
     BANK_DETAILS: "bank-details/",
-    BROKERAGEPLAN:"brokerage-plan/",
   };
   
   export { ROUTES_NAME };
